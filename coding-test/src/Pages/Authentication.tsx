@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Login } from '../Components/Login'
 import { AppContext } from '../AppContext'
 import { useNavigate } from 'react-router-dom'
+import styles from "../Styles/Authentication.module.css";
 import { SignUp } from '../Components/SignUp'
 interface AuthenticationProps{
   visit: string
@@ -21,7 +22,7 @@ export const Authentication = ({visit="login"}:AuthenticationProps) => {
     setCurrent(visit)
   }, [visit])
   return (
-    <div style={{display: 'flex', justifyContent: "center", alignItems: 'center', gap: '2rem'}}>
+    <div className={styles.container}>
      {current === "login" ? <Login  />: <SignUp />}
     </div>
   )

@@ -12,7 +12,7 @@ export const SignUp = () => {
   const {  handleIsAuth } = useContext(AppContext);
   const [error, setError] = useState({name:"", username: "", phone: "", email: "", password: ""})
   const handleError = (msg: string)=>{
-    setError({...error, name:msg, })
+    setError({...error, email:msg, })
   }
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>)=>{
       event.preventDefault();

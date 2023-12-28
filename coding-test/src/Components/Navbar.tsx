@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AppContext } from '../AppContext';
-
+import styles from "../Styles/Navbar.module.css";
 export const Navbar = () => {
   const {  isAuth } = useContext(AppContext);
 
   return (
-    <div style={{padding: ".5rem 3rem",  display: "flex", alignItems: 'center', justifyContent: 'space-between'}}>
+    <div className={styles.container}>
         <div>
         <Link to={"/"}><h1 style={{cursor:'pointer'}}>Brand Wick</h1></Link>
         </div>
