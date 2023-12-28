@@ -1,4 +1,4 @@
-# The Brand Wick
+![image](https://github.com/Hasims2001/thebrandwick-test/assets/58412185/e7278d0f-963a-4f50-af3f-173910064fc7)# The Brand Wick
 
 Welcome to The Brand Wick App. 
 
@@ -12,7 +12,7 @@ Welcome to The Brand Wick App.
 
 
 ## Demo
-Video Link: 
+Video Link: https://youtu.be/DFivyV0t7vI
 
 
 ## Features
@@ -45,6 +45,12 @@ Video Link:
 
 
 ## Screenshot
+
+![image](https://github.com/Hasims2001/thebrandwick-test/assets/58412185/cbf38e34-05e6-4966-a9f8-dfcd7a20401b)
+
+![image](https://github.com/Hasims2001/thebrandwick-test/assets/58412185/c2e0c613-e7db-4e9c-b5b1-a683cd60b117)
+
+![image](https://github.com/Hasims2001/thebrandwick-test/assets/58412185/d5598b33-dae3-4fc3-b6d0-ee6455473cd8)
 
 
 ## Installation
