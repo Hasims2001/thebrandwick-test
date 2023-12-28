@@ -1,0 +1,12 @@
+
+.inputBox{
+    padding: .5rem 1rem;
+    border-radius:  .5rem .5rem 0 .5rem;
+    border: 2px solid #407CFD;
+    font-family: "Poppins";
+    outline: none;
+}
+
+.inputBox:focus{
+    transform: scale(0.97);
+}
