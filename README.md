@@ -1,4 +1,4 @@
-![image](https://github.com/Hasims2001/thebrandwick-test/assets/58412185/e7278d0f-963a-4f50-af3f-173910064fc7)# The Brand Wick
+# The Brand Wick
 
 Welcome to The Brand Wick App. 
 

@@ -43,3 +43,18 @@ export const doLogout = async(token, handleIsAuth, handleError)=>{
         handleError(error.message)
     }
 }
+
+
+export const getPrivateRoute = async(token, handleResult, handleError)=>{
+    try {
+        let res = await axios.get(`${process.env.REACT_APP_API_LINK}/`, {headers: {auth: token}});
+        res = await res?.data;
+        if(!res.issue){
+            handleResult(res.msg)
+        }else{
+            handleError(res.msg)
+        }
+    } catch (error) {
+        handleError(error.message)
+    }
+}

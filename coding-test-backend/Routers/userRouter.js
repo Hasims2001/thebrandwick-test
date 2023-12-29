@@ -58,9 +58,9 @@ userRouter.get("/logout", async (req, res) => {
     if (token) {
         try {
             blacklist.push(token);
-            res.send("logout success!");
+            res.send({issue: false, msg: "logout success!"});
         } catch (err) {
-            res.end(err);
+            res.end({issue: true, msg: err});
         }
     }
     res.end();
