@@ -2,6 +2,7 @@ const express = require('express');
 const { UserModel } = require('../model/userModel');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const {blacklist} = require("../blacklist");
 const userRouter = express.Router();
 require('dotenv').config();
 
@@ -36,7 +37,7 @@ userRouter.post("/login", async (req, res)=>{
             bcrypt.compare(password, user.password, (err, result)=>{
                 if(err) return err;
                 if(result){
-                    const token = jwt.sign({id: user._id, email: user.email}, process.env.VERIFICATION)
+                    const token = jwt.sign({id: user._id, email: user.email}, process.env.VERIFICATION, { expiresIn: "1d" })
                     res.status(200).json({msg:"login success!", user: {...user._doc, token: token}, issue: false})
                 }else{
                     res.status(200).json({msg: "Invalid Credentials", issue: true})
@@ -50,5 +51,18 @@ userRouter.post("/login", async (req, res)=>{
     } catch (err) {
         res.send({msg: err.message, issue: true})
     }
+})
+
+userRouter.get("/logout", async (req, res) => {
+    const token = req.headers.auth;
+    if (token) {
+        try {
+            blacklist.push(token);
+            res.send("logout success!");
+        } catch (err) {
+            res.end(err);
+        }
+    }
+    res.end();
 })
 module.exports = { userRouter }
